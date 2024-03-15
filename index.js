@@ -5,9 +5,12 @@ const socketIo = require('socket.io');
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
+const cors = require('cors');
 
 let activePoll = null;
 let studentAnswers = {};
+
+app.use(cors());
 
 app.use('/socket.io', (req, res) => {
     res.send({ socketio: 'is here!' });
