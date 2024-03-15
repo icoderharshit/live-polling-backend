@@ -1,16 +1,20 @@
 const express = require('express');
 const http = require('http');
-const socketIo = require('socket.io');
+const {Server} = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = new Server(server,{ cors:{
+    origin:'*'
+}});
 const cors = require('cors');
 
 let activePoll = null;
 let studentAnswers = {};
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://live-polling-system.netlify.app'
+}));
 
 app.use('/socket.io', (req, res) => {
     res.send({ socketio: 'is here!' });
