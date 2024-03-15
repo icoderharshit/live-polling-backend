@@ -1,0 +1,22 @@
+{
+  "name": "live-polling-backend",
+  "version": "1.0.0",
+  "description": "Backend for live polling system assignment of Intervue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "socket",
+    "node.js",
+    "live-polling"
+  ],
+  "author": "Harshit Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "socket.io": "^4.7.4"
+  }
+}
