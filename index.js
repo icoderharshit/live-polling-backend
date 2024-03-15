@@ -7,6 +7,8 @@ const server = http.createServer(app);
 const io = new Server(
     server, {
         path:'/socket',
+        reconnection: true,
+        transports:['websocket', 'polling'],
         cors:{
             origin:'*'
         }
