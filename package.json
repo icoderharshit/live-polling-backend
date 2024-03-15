@@ -4,7 +4,8 @@
   "description": "Backend for live polling system assignment of Intervue",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "startdev": "nodemon index.js"
   },
   "keywords": [
     "backend",
@@ -14,6 +15,9 @@
   ],
   "author": "Harshit Sharma",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.3",

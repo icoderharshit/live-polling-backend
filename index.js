@@ -9,6 +9,10 @@ const io = socketIo(server);
 let activePoll = null;
 let studentAnswers = {};
 
+app.use('/socket.io', (req, res) => {
+    res.send({ socketio: 'is here!' });
+});
+
 // Socket.io event handling
 io.on('connection', (socket) => {
     console.log('A user connected');
